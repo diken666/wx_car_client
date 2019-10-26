@@ -1,0 +1,59 @@
+.container{
+  font-size: 13px;
+}
+.h-image{
+  width: 50px;
+  height: 50px;
+  margin: 30px auto;
+  overflow: hidden;
+  /* border-radius: 50%; */
+}
+.h-image image{
+  width: 100%;
+}
+
+
+.f-item{
+  width: 80%;
+  height: 30px;
+  line-height: 30px;
+  margin: 30px auto;
+  border-bottom:1px solid #FF6B23;
+  overflow: hidden;
+}
+.f-item image{
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+.f-item input{
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+  line-height: 20px;
+}
+.f-item radio-group{
+  float: left;
+  /* top: -10px; */
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  line-height: 20px;
+ }
+ .f-item radio-group label{
+   margin-left: 10px
+ }
+
+.btn-register{
+ width: 180px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #FF6B23;
+  margin: 30px auto 0  auto;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+

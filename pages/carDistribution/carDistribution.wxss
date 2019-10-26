@@ -1,0 +1,12 @@
+/* pages/carDistribution/carDistribution.wxss */
+
+.canvas {
+    width: 100%;
+    height: 200px;
+}
+.table-title{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}

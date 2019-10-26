@@ -1,0 +1,42 @@
+<view class='head'>
+    <view class='h-userPic'>
+        <image src='{{userInfo.link}}'></image>
+    </view>
+    <view class='h-title'>
+        <view class='h-name'>
+            <text>{{userInfo.name}}</text>
+            <image wx:if='{{userInfo.sex === "男"}}' src='../../image/man.png'></image>
+            <image wx:if='{{userInfo.sex === "女"}}' src='../../image/woman.png'></image>
+        </view>
+        <view class='h-location'>地区：{{userInfo.location}}</view>
+    </view>
+</view>
+<view class='content'>
+    <view class='item'>
+        <view class='item-title'>UID</view>
+        <view class='item-value'>{{userInfo.uid}}</view>
+    </view>
+    <view class='item'>
+        <view class='item-title'>电话</view>
+        <view class='item-value'>{{userInfo.phone}}</view>
+    </view>
+    <view class='item'>
+        <view class='item-title'>行为评分</view>
+        <view class='item-value'>{{userInfo.score}}分</view>
+    </view>
+    <view class='item'>
+        <view class='item-title'>注册时间</view>
+        <view class='item-value'>{{userInfo.time}}</view>
+    </view>
+</view>
+
+<view class='report' catchtap='reportUser' data-id='{{userInfo.uid}}'>
+    <text>举报不良行为</text>
+    <image src='../../image/right_2.png'></image>
+</view>
+
+<view class='contect'>
+    <view catchtap='addFriend' data-fid='{{userInfo.uid}}'>添加好友</view>
+    <view catchtap='callHe'>电话联系</view>
+    <view catchtap='addToMyNote'>添加到手机通讯录</view> 
+</view>

@@ -1,0 +1,8 @@
+<view>
+  <!-- <view>xxx</view>
+  <view>xxx</view>
+  <view>xxx</view> -->
+  <button class='btn-logout' catchtap='logout'>退出登录</button>
+
+
+</view>

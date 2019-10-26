@@ -1,0 +1,41 @@
+
+<view wx:if='{{items.length===0?true:false}}' class='empty'>
+    <image src='../../image/empty.png'></image>
+    <view>暂无售车记录喔~</view>
+</view>
+
+<view wx:if='{{items.length !==0?true:false}}' class='container'>
+    <view class='item' wx:for='{{items}}'>
+        <text class='time'>{{item.time}}</text>
+        <view class='box'>
+            <view class='title'><text>{{item.cartype}}</text></view>
+            <view class='item-data'>
+                <view class='item-data-item'>
+                    <view class='i-title'>行驶里程</view>
+                    <view class='i-value'>{{item.distance}}万公里</view>
+                </view>
+                <view class='item-data-item'>
+                    <view class='i-title'>车辆所在地</view>
+                    <view class='i-value'>{{item.city}}</view>
+                </view>
+                <view class='item-data-item'>
+                    <view class='i-title'>上牌时间</view>
+                    <view class='i-value'>{{item.date}}</view>
+                </view>
+            </view>
+            <view class='checkbox'>
+                <view class='c-item' wx:if='{{item.checkplace}}'>
+                    <image src='../../image/pass.png'></image>
+                    <text>已被核实</text>
+                </view>
+                <view class='c-item' wx:if='{{item.checkplace}}'>
+                    <view>看车地址：{{item.checkplace}}</view>
+                </view>
+                <view class='c-item' wx:if='{{!item.checkplace}}'>
+                    <image src='../../image/wait.png'></image>
+                    <text>等待审查</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

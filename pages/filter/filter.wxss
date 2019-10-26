@@ -1,0 +1,47 @@
+/* pages/filter/filter.wxss */
+.b-filter{
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fff;
+}
+.filter-item{
+    width: 90%;
+    /* height: 150px; */
+    border-bottom: 1px solid #e6e6e6;
+    margin: 0 auto;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+.filter-item:last-child{
+    border: none;
+}
+
+.filter-item view{
+    margin-bottom: 30px;
+}
+.filter-item text{
+    font-size: 13px;
+    font-weight: 400;
+    
+}
+.item{
+    display: inline-block;
+    border: 1px solid #e6e6e6;
+    padding: 5px 10px ;
+    margin: 5px 0;
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+.btn{
+  width: 90%;
+  color: #fff;
+  background-color: #FF6B23;
+  margin: 50px auto;
+}
+.select{
+    border: 1px solid #FF6B23;
+}

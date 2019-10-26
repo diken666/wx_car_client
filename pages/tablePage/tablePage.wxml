@@ -1,0 +1,47 @@
+<view class='box'>
+    <view class='box-item' catchtap='toCarDistribution'>
+        <view class='box-image'>
+            <image src='../../image/histogram.png'></image>
+        </view>
+        <view class='box-title'>各城市汽车分布</view>
+        <view class='right'>
+            <image src='../../image/right_2.png'></image>
+        </view>
+    </view>
+    <view class='box-item' catchtap='toCarPriceDistribution'>
+        <view class='box-image'>
+            <image src='../../image/histogram.png'></image>
+        </view>
+        <view class='box-title'>各价位汽车分布</view>
+        <view class='right'>
+            <image src='../../image/right_2.png'></image>
+        </view>
+    </view>
+    <view class='box-item' catchtap='toCarAgeDistribution'>
+        <view class='box-image'>
+            <image src='../../image/histogram.png'></image>
+        </view>
+        <view class='box-title'>年份分布</view>
+        <view class='right'>
+            <image src='../../image/right_2.png'></image>
+        </view>
+    </view>
+    <view class='box-item' catchtap='toCarTypeDistribution'>
+        <view class='box-image'>
+            <image src='../../image/brokenLine.png'></image>
+        </view>
+        <view class='box-title'>汽车品牌分布</view>
+        <view class='right'>
+            <image src='../../image/right_2.png'></image>
+        </view>
+    </view>
+    <view class='box-item' catchtap='toCarHotDistribution'>
+        <view class='box-image'>
+            <image src='../../image/pie.png'></image>
+        </view>
+        <view class='box-title'>热销车辆品牌</view>
+        <view class='right'>
+            <image src='../../image/right_2.png'></image>
+        </view>
+    </view>
+</view>

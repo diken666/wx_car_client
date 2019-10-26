@@ -1,0 +1,26 @@
+
+<view wx:if='{{items.length===0?true:false}}' class='empty'>
+    <image src='../../image/empty.png'></image>
+    <view>暂无举报记录喔~</view>
+</view>
+
+<view wx:if='{{items.length !==0?true:false}}' class='container'>
+    <view class='item' wx:for='{{items}}'>
+        <text class='time'>{{item.time}}</text>
+        <view class='box'>
+            <view wx:if='{{uid === item.uid}}' class='title'><text>我</text>举报<text>{{item.bname}}</text> {{item.type}}</view>
+            <view wx:if='{{uid === item.bid}}' class='title'><text>{{item.uname}}</text>举报<text>我</text> {{item.type}}</view>
+            <view class='reason'>理由：{{item.reason}}</view>
+            <view class='checkbox'>
+                <view class='c-item' wx:if='{{item.hascheck}}'>
+                    <image src='../../image/pass.png'></image>
+                    <text>已被核实</text>
+                </view>
+                <view class='c-item' wx:if='{{!item.hascheck}}'>
+                    <image src='../../image/wait.png'></image>
+                    <text>等待审查</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

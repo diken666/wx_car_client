@@ -1,0 +1,312 @@
+/* pages/buyCar/buyCar.wxss */
+
+
+.search{
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 10px 0;
+  font-size: 13px;
+  text-align: center;
+  background-color: #fff;
+  z-index: 100
+}
+.s-picker{
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-left: 3px;
+  width: 60px;
+  height: 100%;
+  text-align: center;
+  font-size:15px;
+  font-weight: 700;
+  /* border: 1px solid #000; */
+}
+.s-picker image{
+  position: relative;
+  /* margin-left: 5px; */
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.s-input{
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  border-radius: 15px;
+  color: #a5abb2;
+  background-color: #e6e6e6;
+}
+.s-input icon{
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+.s-favorite{
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  width: 60px;
+  height: 100%;
+}
+.s-favorite image{
+  width: 30px;
+  height: 30px;
+}
+
+
+.filter{
+  position: fixed;
+  top: 49px;
+  width: 100%;
+  font-size: 13px;
+  text-align: center;
+  background-color: #fff;
+  z-index: 100;
+}
+.f-item{
+  display: inline-block;
+  width: 25%;
+  height: 30px;
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+.f-item image{
+  position: relative;
+  margin-left: 2px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+}
+.b-order{
+  width: 100%;
+  font-size: 13px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.b-order view{
+  margin: 0 20px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #e6e6e6
+}
+.b-order view:first-child{
+  border-top:  1px solid #e6e6e6
+}
+.b-price{
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.minView, .maxView{
+  position: relative;
+  width: 90%;
+  height: 30px;
+  margin: 30px auto;
+  text-align: center;
+}
+.minView text, .maxView text{
+  float: left;
+  width: 10%;
+  height: 100%;
+  line-height: 100%;
+  font-size: 13px;
+}
+.minView slider, .maxView slider{
+  float: left;
+  display: inline-block;
+  width: 70%;
+  margin: 0 0 0 20px;
+}
+.priceShow{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.choose{
+    position: relative;
+    width: 100%;
+    padding-top: 90px;
+    background-color: rgba(90, 87, 87, 0.137);
+    font-size: 13px;
+   
+}
+.chooseItme{
+    display: inline-block;
+    padding: 5px 5px 5px 10px;
+    margin: 7px;
+    background-color: #fff;
+}
+.chooseItme image{
+    position: relative;
+    margin-left: 5px;
+    top: 2px;
+    width: 15px;
+    height: 15px;
+}
+
+
+.btn-search{
+    display: inline-block;
+    padding: 5px;
+    margin: 7px;
+    font-size: 13px;
+    color: #fff;
+    background-color: #FF6B23;
+    border-radius: 5px;
+}
+
+
+
+.carInfo{
+  position: relative;
+  width: 55%;
+  height: 200rpx;
+  float: right;
+  font-size: 13px;
+}
+.carInfo-image{
+    position: relative;
+    top: 2rpx;
+    width: 13px;
+    height: 13px;
+
+}
+.carInfo-con{
+    margin: 10rpx 0;
+}
+.carInfo-place{
+    display: inline-block;
+}
+
+
+.carInfo-collection{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 10px;
+}
+.carInfo-collection image{
+    width: 20px;
+    height: 20px;
+
+}
+
+.carInfo-title{
+  display: block;
+  width: 100%;
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+}
+.carInfo-time, .carInfo-dis{
+  display: inline-block;
+  width: 40%;
+  height: 15px;
+  line-height: 15px;
+  font-size: 10px;
+  color: gray;
+}
+.carInfo-gh{
+  display: inline-block;
+  margin-left: 20px;
+  height: 15px;
+  width: 35px;
+  line-height: 15px;
+  font-size: 12px;
+  border: 1px solid #3fc56e;
+  color: #3fc56e;
+  border-radius: 5px;
+  text-align: center;
+}
+.carInfo-price{
+  color: #f95523;
+}
+.carInfo-firstPay{
+  margin-left: 10px;
+  color: #f95523;
+  font-size: 10px
+}
+
+.item{
+  position: relative;
+  height: 200rpx;
+  border-top: 1px solid #e6e6e6;
+  margin: 40rpx 20rpx 10rpx 20rpx;
+  padding: 20rpx 0;
+}
+.item:first-child{
+    border-top: none
+}
+.pic-container{
+  position:relative;
+  float: left;
+  width: 300rpx;
+  height: 100%;
+  border-radius: 5rpx;
+  overflow: hidden;
+}
+.pic-container image{
+  width: 100%;
+  height: 100%
+}
+
+.info-container{
+    position: fixed;       
+    top: 100px;
+    width: 100%;
+}
+
+.info{
+    position: relative;
+    margin: 0  auto;
+    width: 50%;
+    padding: 10px;
+    background-color: #FF6B23;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.loading{
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background-color: #e6e6e6;
+    text-align: center;
+    font-size: 13px;
+}
+.loading text{
+    display: block;
+    /* margin-top:  */
+    height: 100%;
+    line-height: 50px;
+}
+.loading image{
+    position: relative;
+    margin: 10px auto;
+    width: 30px;
+    height: 30px;
+    animation: Rotate 1s ease-in-out infinite;
+}
+
+@keyframes Rotate{
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}

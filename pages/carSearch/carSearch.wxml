@@ -1,0 +1,38 @@
+<view class='search'>
+    <view class='s-center'>
+    <form bindsubmit='formSubmit'>
+        <view class='s-content'>
+            <icon type='search' size='13px' color='#000'></icon>
+            <input name='content' type='text' value='' placeholder=''></input>
+        </view>
+        <button form-type='submit' class='s-btn'>搜索</button>
+    </form>  
+    </view>
+</view>
+
+<view class='item-con'>
+    <view class='item'>
+        <text class='item-title'>历史搜索</text> 
+        <view class='item-del' catchtap='delHistory'>
+            <image src='../../image/garbage.png'></image>
+            <text>清空</text>
+        </view>   
+    </view>
+    <view class='item-list' catchtap='choose'>
+        <text wx:for='{{searchHistory}}' wx:for-index="index" wx:for-item="item" data-value='{{item}}'>{{item}}</text>
+    </view>
+</view>
+<view class='item-con'>
+    <view class='item'>
+        <text class='item-title'>热门搜索</text> 
+    </view>
+    <view class='item-list' catchtap='choose'>
+        <text data-value='奥迪A5'>奥迪A5</text>
+        <text data-value='奥迪A8L'>奥迪A8L</text>
+        <text data-value='奥迪Q7'>奥迪Q7</text>
+        <text data-value='马自达'>马自达</text>
+        <text data-value='吉利'>吉利</text>
+        <text data-value='奥迪A7'>奥迪A7</text>
+        <text data-value='奥迪Q5'>奥迪Q5</text>
+    </view>
+</view>

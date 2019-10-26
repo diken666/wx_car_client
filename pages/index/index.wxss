@@ -1,0 +1,243 @@
+.header{
+    width: 100%;
+    height: 400rpx;
+}
+
+.search{
+  position: fixed;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 10px 0;
+  font-size: 13px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1000;
+}
+.s-picker{
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-left: 3px;
+  width: 60px;
+  height: 100%;
+  text-align: center;
+  font-size:15px;
+  font-weight: 700;
+  color: #000;
+  /* border: 1px solid #000; */
+}
+
+.s-input{
+  position: relative;
+  display: inline-block;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  border-radius: 15px;
+  color: #a5abb2;
+  background-color: #e6e6e6;
+}
+.s-input icon{
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+.s-favorite{
+  position: relative;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  width: 60px;
+  height: 100%;
+}
+.s-favorite image{
+  width: 30px;
+  height: 30px;
+}
+
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper image{
+    width: 100%;
+    /* height: 100%; */
+}
+.item{
+  position: relative;
+  height: 200rpx;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 20rpx 20rpx 10rpx 20rpx;
+  padding: 20rpx 0;
+}
+.item:first{
+    margin-top: 20rpx;
+}
+.pic-container{
+  position:relative;
+  float: left;
+  width: 300rpx;
+  height: 100%;
+  border-radius: 5rpx;
+  overflow: hidden;
+}
+.pic-container image{
+  width: 100%;
+  height: 100%
+}
+
+.carInfo{
+  position: relative;
+  width: 55%;
+  height: 200rpx;
+  float: right;
+  font-size: 13px;
+}
+
+.carInfo-title{
+  display: block;
+  width: 100%;
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+}
+.carInfo-time, .carInfo-dis{
+  display: inline-block;
+  width: 40%;
+  height: 15px;
+  line-height: 15px;
+  font-size: 10px;
+  color: gray;
+}
+.carInfo-gh{
+  display: block;
+  margin: 3rpx 0;
+  height: 15px;
+  width: 35px;
+  line-height: 15px;
+  font-size: 12px;
+  border: 1px solid #3fc56e;
+  color: #3fc56e;
+  border-radius: 5px;
+  text-align: center;
+}
+.carInfo-price{
+  color: #f95523;
+}
+.carInfo-firstPay{
+  margin-left: 10px;
+  color: #f95523;
+  font-size: 10px
+}
+
+.title{
+    display: block;
+    margin: 40rpx 20rpx 20rpx 20rpx;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.empty{
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+}
+.empty image{
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+}
+.empty view{
+    font-size: 13px;
+    color: #515151;
+}
+
+.q-item{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.q-head{
+    font-size: 12px;
+    height: 20px;
+    color: #515151;
+}
+.q-userpic{
+    display: inline-block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.q-userpic image{
+    width: 20px;
+    height: 20px;
+}
+.q-name, .q-time{
+    display: inline-block;
+    position: relative;
+    /* float: left; */
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+.q-time{
+    margin-left: 20px;
+}
+.q-title{
+    font-size: 15px;
+    line-height: 25px;
+    margin: 20px auto;
+}
+.q-footer{
+    position: relative;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    color: #515151
+}
+.q-readNum, .q-replyNum{
+    position: relative;
+    display:  inline-block;
+    height: 20px;
+}
+.q-replyNum{
+    margin-left: 10px;
+}
+.q-readNum text,.q-replyNum text{
+    height: 20px;
+    line-height: 20px;
+}
+.q-readNum image,.q-replyNum image{
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+}
+.lookMoreQuestion{
+    font-size: 13px;
+    color: #999;
+    width: 90%;
+    margin: 10px auto;
+}
+
+.table-con{
+    position: relative;
+    width: 100%;
+}
+.canvas {
+    width: 100%;
+    height: 200px;
+}
+.table-title{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}

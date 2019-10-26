@@ -1,0 +1,95 @@
+<view class='container'>
+  <view wx:if='{{!isLogin}}'>
+    <view class='u-image'>
+      <image src='../../image/user.png' catchtap='login' mode='widthFix' catchlongtap='easyLogin'></image>
+    </view>
+    <button class='btn-login' catchtap='login'>点击登录</button>
+  </view>
+  <view wx:if='{{isLogin}}' class='login-con'>
+    <view class='h-user'>
+        <image class='h-bg' src='../../image/bg.jpg'></image>
+        <view class='h-image' catchtap='selectHeadPic'>
+            <image wx:if='{{!link}}' src='../../image/default_user.png' mode='widthFix'></image>
+            <image wx:if='{{link}}' src='{{link}}' mode='widthFix'></image>
+        </view>
+        <view class='h-title'>
+            <view class='h-title-name'>{{userName}}</view>
+            <view class='h-title-uid'>uid：{{uid}}</view>
+        </view>
+
+        <view class='set' catchtap='setApp'>
+            <image src='../../image/set_3.png' mode='widthFix'></image>
+        </view>
+    </view> 
+    <view class='line'></view>
+    <view class='box'>
+        <view class='box-item' catchtap='toFriends'>
+            <view class='box-image'>
+                <image src='../../image/friends.png'></image>
+            </view>
+            <view class='box-title'>好友</view>
+            <view class='right'>
+                <image src='../../image/right_2.png'></image>
+            </view>
+        </view>
+        <view class='box-item' catchtap='toFavorite'>
+            <view class='box-image'>
+                <image src='../../image/heart.png'></image>
+            </view>
+            <view class='box-title'>收藏</view>
+            <view class='right'>
+                <image src='../../image/right_2.png'></image>
+            </view>
+        </view>
+        <view class='box-item' catchtap='toQuestion'>
+            <view class='box-image'>
+                <image src='../../image/question.png'></image>
+            </view>
+            <view class='box-title'>问问</view>
+            <view class='right'>
+                <image src='../../image/right_2.png'></image>
+            </view>
+        </view>
+
+        <view class='box-item' catchtap='toHistory'>
+            <view class='box-image'>
+                <image src='../../image/history.png'></image>
+            </view>
+            <view class='box-title'>历史</view>
+            <view class='right'>
+                <image src='../../image/right_2.png'></image>
+            </view>
+        </view>
+
+        <view class='box-item' catchtap='toSaleCar'>
+            <view class='box-image'>
+                <image src='../../image/sale.png'></image>
+            </view>
+            <view class='box-title'>卖车</view>
+            <view class='right'>
+                <image src='../../image/right_2.png'></image>
+            </view>
+        </view>
+
+        <view class='box-item' catchtap='toTablePage'>
+            <view class='box-image'>
+                <image src='../../image/data.png'></image>
+            </view>
+            <view class='box-title'>数据</view>
+            <view class='right'>
+                <image src='../../image/right_2.png'></image>
+            </view>
+        </view>
+
+        <view class='box-item' catchtap='toReport'>
+            <view class='box-image'>
+                <image src='../../image/report.png'></image>
+            </view>
+            <view class='box-title'>举报</view>
+            <view class='right'>
+                <image src='../../image/right_2.png'></image>
+            </view>
+        </view>
+    </view>
+  </view>
+</view>

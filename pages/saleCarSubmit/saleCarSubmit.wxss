@@ -1,0 +1,78 @@
+/* pages/saleCarSubmit/saleCarSubmit.wxss */
+
+/* page{
+    background-color: #e6e6e6;
+} */
+
+.container{
+    padding: 20px 5%;
+    background-color: #fff;
+}
+.item{
+    width: 100%;
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.noBorder{
+    border-bottom: none;
+}
+.title{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+}
+.picker{
+    display: inline-block;
+    float: right;
+    font-size: 15px;
+    height: 30px;
+    line-height: 30px;
+}
+.right{
+    position: relative;
+    float: right;
+    top: 8px;
+    width: 15px;
+    height: 15px;
+}
+
+.carType{
+    display: inline-block;
+    font-size: 15px;
+    width: 60%;
+    float: right;
+    text-align: right;
+}
+
+.danwei{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+    font-size: 15px;
+}
+.distance{
+    display: inline-block;
+    height: 30px;
+    width: 50%;
+    float: right;
+    font-size: 15px;
+    text-align: right;
+}
+.appraise{
+    margin-top: 5px;
+    padding: 5px 2%;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    font-size: 15px;
+    width: 96%;
+}
+
+.btn{
+    margin-top: 30px;
+    width: 100%;
+    color: #fff;
+    background-color: #FF6B23;
+}

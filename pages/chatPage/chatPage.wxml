@@ -1,0 +1,18 @@
+<view class='content'>
+    <view wx:for='{{items}}' class='item'>
+        <view wx:if='{{item.sid===uid}}' class='right'>
+            <text>{{item.content}}</text>
+           <image src='{{limg}}'></image>
+        </view>
+        <view wx:if='{{item.sid!==uid}}' class='left'>
+            <image src='{{simg}}'></image>
+            <text>{{item.content}}</text>
+        </view>
+    </view>
+</view>
+<view class='fixed-con'>
+    <view class='fixed'>
+        <input value='{{contentVal}}' class='input' bindinput='userInput'></input>
+        <view class='send' catchtap='send'>发送</view>
+    </view>   
+</view>

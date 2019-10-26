@@ -1,0 +1,40 @@
+/* pages/reportUser/reportUser.wxss */
+
+.container{
+    padding: 30px 5%;
+}
+.item{
+    position: relative;
+    padding: 15px 0;
+}
+.name{
+    display: inline-block;
+    width: 28%;
+    font-size: 16px;
+}
+.value{
+    display: inline-block;
+    margin-left: 2%;
+    width: 70%;
+    color: #999;
+    font-size: 14px;
+}
+
+picker, textarea, input{
+    border: 1px solid #e6e6e6;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 0;
+}
+.fleft{
+    float: left;
+}
+.clearFloat{
+    clear: both;
+}
+
+.btn{
+    margin-top: 40px;
+    color: #fff;
+    background-color: #FF6B23;
+}

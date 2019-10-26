@@ -1,0 +1,49 @@
+<view class='con'>
+    <view class='h-title'>{{articleInfo.title}}</view>
+    <view class='h-con'>
+        <view class='h-image' catchtap='toUser' data-uid='{{authorInfo.uid}}' data-fid='{{articleInfo.id}}'>
+            <image src='{{authorInfo.link}}'></image>
+        </view>
+        <view class='h-name' catchtap='toUser'>{{authorInfo.name}}</view>
+    </view>
+    <view class='h-content'>{{articleInfo.content}}</view>
+    <view class='tips'> 
+        <view class='t-item'>
+            <image class='t-image' src='../../image/read.png'></image>
+            <text class='t-content'>{{articleInfo.looknum}}</text>
+        </view>
+        <view class='t-item'>
+            <image class='t-image' src='../../image/time.png'></image>
+            <text class='t-content'>{{articleInfo.time}}</text>
+        </view>
+    </view>
+
+    <view class='msg'>
+        <text class='msgTitle'>留言</text>
+        <text class='writeMsg' catchtap='writeQuestionComment'>写留言</text>
+    </view>
+    <view wx:if='{{!isCommentReady}}'>
+        <view class='loadCon'>
+            <image class='loading' src='../../image/loading.png'></image>
+        </view>
+    </view>
+    <view wx:if='{{isCommentReady}}'>
+        <view wx:if='{{commentItems.length===0?true:false}}' class='empty'>
+            <image src='../../image/empty.png'></image>
+            <view>留言为空喔~</view>
+        </view>
+        <view wx:if='{{commentItems.length!==0?true:false}}' class=''>
+            <view wx:for='{{commentItems}}' class='c-item'>        
+                <view class='c-item-title'>
+                    <text class='c-name' catchtap='toUser' data-uid='{{item.uid}}' data-fid='{{item.qid}}'>{{item.name}}</text>
+                    <view class='c-image' catchtap='likeIt' data-id='{{item.uid}}' data-index='{{index}}'> 
+                        <image wx:if='{{!isPressed[index]}}' src='../../image/like.png'></image>
+                        <image wx:if='{{isPressed[index]}}' src='../../image/like_select.png'></image>
+                        <text class='likeNum'>{{item.likes}}</text>
+                    </view>
+                </view>
+                <view class='c-content'>{{item.content}}</view>   
+            </view>
+        </view>
+    </view>
+</view>

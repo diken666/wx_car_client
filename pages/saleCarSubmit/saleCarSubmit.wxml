@@ -1,0 +1,26 @@
+<view class='container'>
+    <view class='item'>
+        <view class='title'>卖车城市</view>
+        <image class='right' src='../../image/right.png'></image>
+        <picker bindchange='cityChange' class='picker' value='{{cityIndex}}' range='{{city}}'>{{city[cityIndex]}}</picker>  
+    </view>
+    <view class='item'>
+        <view class='title'>品牌车系</view>
+        <input bindinput='carTypeInput' class='carType' placeholder='品牌车系'></input>
+    </view>
+    <view class='item'>
+        <view class='title'>购车时间</view>
+        <image class='right' src='../../image/right.png'></image>
+        <picker bindchange='timeChange' class='picker' mode='date' value='{{"2019-04-22"}}' start="2000-01-01" end="2019-04-22">{{date}}</picker>
+    </view>
+    <view class='item'>
+        <view class='title'>行驶里程</view>
+        <text class='danwei' type='number'>万公里</text>
+        <input bindinput='distanceInput' class='distance' placeholder='里程'></input>
+    </view>
+    <view class='item noBorder'>
+        <view class='title'>车况自评</view>
+        <textarea bindinput='appraiseInput' maxlength='150' class='appraise' placeholder='最多150字'></textarea>
+    </view>
+    <button catchtap='submit' class='btn'>确定</button>
+</view>

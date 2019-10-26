@@ -1,0 +1,35 @@
+<view class='container'>
+    
+    <view class='item'>
+        <view class='item-title'>爱车车型</view>
+        <input bindinput='carTypeInput' class='cartype' placeholder='爱车车型'></input>
+    </view>
+    <view class='item'>
+        <view class='item-title'>上牌时间</view>
+        <picker bindchange='timeChange' class='picker' mode='date' value='{{"2000-01-01"}}' start="2000-01-01" end="2019-04-22">{{date}}</picker>
+    </view>
+    <view class='item'>
+        <view class='item-title'>数据来源</view>
+        <view class='item-content' catchtap='fromTap'>
+            <text data-index='0' style='{{dataFrom === 0?"border: 1px solid #FF6B23":""}}'>全部</text>
+            <text style='{{dataFrom === 1?"border: 1px solid #FF6B23":""}}' data-index='1'>瓜子</text>
+            <text style='{{dataFrom === 2?"border: 1px solid #FF6B23":""}}' data-index='2'>人人车</text>
+        </view>
+    </view>
+    
+    <view wx:if='{{loading && carType}}' class='loading-con'>
+        <image class='loading-img' src='../../image/loading.png'></image>
+    </view>
+    <view wx:if='{{!loading}}' class='showBox'>
+        <view wx:if='{{thisYearItem.num === 0}}' class='thisYear'>无此年售车记录</view>
+        <view wx:if='{{thisYearItem.num !== 0}}'  class='thisYear'>
+            <view class='num'>该年找到<text>{{thisYearItem.num}}</text>条记录</view>
+            <view class='price'>平均售价为<text>{{thisYearItem.price}}</text>万</view>
+        </view>
+        <view wx:if='{{allItem.num === 0}}'  class='allYear'>无此车型售车记录</view>
+        <view wx:if='{{allItem.num !== 0}}'  class='allYear'>
+            <view class='num'>此品牌共<text>{{allItem.num}}</text>条记录</view>
+            <view class='price'>平均售价为<text>{{allItem.price}}</text>万</view>
+        </view>
+    </view>
+</view>

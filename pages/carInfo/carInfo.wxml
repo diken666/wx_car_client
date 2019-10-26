@@ -1,0 +1,321 @@
+<view wx:if='{{!isReady}}'>
+    <view class='notReadyImage'>
+        <image src='../../image/loading_red.png'></image>
+    </view>
+</view>
+<view wx:if='{{isReady}}'>
+    <view class='header-image'>
+        <swiper class='swiper' bindchange='swiperChange'>
+            <swiper-item wx:for='{{picArr}}'>
+                <image src='{{item}}' mode='widthFix'></image>
+            </swiper-item>
+        </swiper>
+        <view class='picIndex'>{{currentIndex}}/{{picLength}} </view>
+    </view>
+    <view class='h-tag'>
+        <view class='price'>{{shortInfo.price}}<text>万 车主报价</text></view>
+        <view class='carname'>{{shortInfo.carname}}</view>
+        <view class='gh'>{{shortInfo.gh}}过户</view>
+    </view>
+    <view class='line'></view>
+    <view class='shortInfo'>
+        <view class='s-title'>
+            <text>车辆信息</text>
+        </view>
+        <view class='s-row'>
+            <view class='s-item'>
+                <view class='s-item-title'>行驶里程</view>
+                <view class='s-item-value'>{{shortInfo.xslc}}万公里</view>
+            </view>
+            <view class='s-item'>
+                <view class='s-item-title'>上牌时间</view>
+                <view class='s-item-value'>{{shortInfo.spsj}}</view>
+            </view>
+            <view class='s-item'>
+                <view class='s-item-title'>所在地</view>
+                <view class='s-item-value'>{{shortInfo.place}}</view>
+            </view>
+        </view>
+         <view class='s-row'>
+            <view class='s-item'>
+                <view class='s-item-title'>变数箱</view>
+                <view class='s-item-value'>{{shortInfo.bsx}}</view>
+            </view>
+            <view class='s-item'>
+                <view class='s-item-title'>排量</view>
+                <view class='s-item-value'>{{shortInfo.pl}}L</view>
+            </view>
+            <view class='s-item'>
+                <view class='s-item-title'>排放标准</view>
+                <view class='s-item-value'>{{shortInfo.pfbz}}</view>
+            </view>
+        </view>
+        <view class='s-row'>
+            <view class='s-item'>
+                <view class='s-item-title'>年检到期</view>
+                <view class='s-item-value'>{{shortInfo.nj}}</view>
+            </view>
+            <view class='s-item'>
+                <view class='s-item-title'>交强险到期</view>
+                <view class='s-item-value'>{{shortInfo.jqx}}</view>
+            </view>
+            <view class='s-item'>
+                <view class='s-item-title'>商业险到期</view>
+                <view class='s-item-value'>{{shortInfo.syx}}</view>
+            </view>
+        </view>
+        <view wx:if='{{!isLoadMore}}' class='forMore' catchtap='forMore'>
+            <text>查看更多配置信息</text>
+            <image src='../../image/right.png'></image>
+        </view>
+    </view>
+    <view class='line'></view>
+    <view wx:if='{{isLoadMore}}'>
+        <view class='s-title'>
+            <text>基本参数</text>
+        </view>
+        <view class='item'>
+            <view class='item-list'>
+                <view class='item-list-left'>厂商</view>
+                <view class='item-list-right'>{{baseInfo.company}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>发动机</view>
+                <view class='item-list-right'>{{baseInfo.engine}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>变速箱</view>
+                <view class='item-list-right'>{{baseInfo.bsx}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>车身结构</view>
+                <view class='item-list-right'>{{baseInfo.body}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>长*宽*高(mm)</view>
+                <view class='item-list-right'>{{baseInfo.carSize}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>轴距</view>
+                <view class='item-list-right'>{{baseInfo.zj}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>整备质量</view>
+                <view class='item-list-right'>{{baseInfo.weight}}</view>
+            </view>
+        </view>
+        <view class='line'></view>
+        <view class='s-title'>
+            <text>发动机参数</text>
+        </view>
+        <view class='item'>
+            <view class='item-list'>
+                <view class='item-list-left'>排量</view>
+                <view class='item-list-right'>{{engineInfo.pl}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>进气形式</view>
+                <view class='item-list-right'>{{engineInfo.jqxs}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>气缸</view>
+                <view class='item-list-right'>{{engineInfo.qg}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>最大马力(Ps)</view>
+                <view class='item-list-right'>{{engineInfo.zdml}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>最大扭矩(N*m)</view>
+                <view class='item-list-right'>{{engineInfo.zdnj}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>燃料类型</view>
+                <view class='item-list-right'>{{engineInfo.rllx}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>燃油标号</view>
+                <view class='item-list-right'>{{engineInfo.rlbh}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>供油方式</view>
+                <view class='item-list-right'>{{engineInfo.gyfs}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>排放标准</view>
+                <view class='item-list-right'>{{engineInfo.pfbz}}</view>
+            </view>
+        </view>
+        <view class='line'></view>
+        <view class='s-title'>
+            <text>底盘及制动</text>
+        </view>
+        <view class='item'>
+            <view class='item-list'>
+                <view class='item-list-left'>驱动方式</view>
+                <view class='item-list-right'>{{stopInfo.qdfs}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>助力方式</view>
+                <view class='item-list-right'>{{stopInfo.zlfs}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>前悬挂类型</view>
+                <view class='item-list-right'>{{stopInfo.qxglx}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>后悬挂类型</view>
+                <view class='item-list-right'>{{stopInfo.hxglx}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>前制动类型</view>
+                <view class='item-list-right'>{{stopInfo.qzdlx}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>后制动类型</view>
+                <view class='item-list-right'>{{stopInfo.hzdlx}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>前轮胎规格</view>
+                <view class='item-list-right'>{{stopInfo.qltgg}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>后轮胎规格</view>
+                <view class='item-list-right'>{{stopInfo.hltgg}}</view>
+            </view>
+        </view>
+        <view class='line'></view>
+        <view class='s-title'>
+            <text>安全配置</text>
+        </view>
+        <view class='item'>
+            <view class='item-list'>
+                <view class='item-list-left'>主副驾驶安全气囊</view>
+                <view class='item-list-right'>{{safeInfo.aqqn}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>胎压监测</view>
+                <view class='item-list-right'>{{safeInfo.tyjc}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>车内中控锁</view>
+                <view class='item-list-right'>{{safeInfo.cnzks}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>儿童座椅接口</view>
+                <view class='item-list-right'>{{safeInfo.zyjk}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>无钥匙启动</view>
+                <view class='item-list-right'>{{safeInfo.wysqd}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>防抱死系统(ABS)</view>
+                <view class='item-list-right'>{{safeInfo.fbsxt}}</view>
+            </view>
+        </view>
+        <view class='line'></view>
+        <view class='s-title'>
+            <text>外部配置</text>
+        </view>
+        <view class='item'>
+            <view class='item-list'>
+                <view class='item-list-left'>电动车窗</view>
+                <view class='item-list-right'>{{outsideInfo.ddtc}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>全景天窗</view>
+                <view class='item-list-right'>{{outsideInfo.qjtc}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>电动吸合门</view>
+                <view class='item-list-right'>{{outsideInfo.ddxhm}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>前后电动车窗</view>
+                <view class='item-list-right'>{{outsideInfo.qhddcc}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>后视镜电动调节</view>
+                <view class='item-list-right'>{{outsideInfo.ddtj}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>后视镜加热</view>
+                <view class='item-list-right'>{{outsideInfo.hsjjr}}</view>
+            </view>
+        </view>
+                <view class='line'></view>
+        <view class='s-title'>
+            <text>内部配置</text>
+        </view>
+        <view class='item'>
+            <view class='item-list'>
+                <view class='item-list-left'>多功能方向盘</view>
+                <view class='item-list-right'>{{insideInfo.fxp}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>定速巡航</view>
+                <view class='item-list-right'>{{insideInfo.dsxh}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>空调</view>
+                <view class='item-list-right'>{{insidein.kt}}</view>
+            </view>
+            <view class='item-list'>
+                <view class='item-list-left'>GPS</view>
+                <view class='item-list-right'>{{insideInfo.GPS}}</view>
+            </view>
+        </view>
+        <view class='notForMore' catchtap='packUp'>
+            <text>收起</text>
+            <image src='../../image/packUp.png'></image>
+        </view>
+        <view class='line'></view>
+    </view>
+    <view class='func-box'>
+        <view class='box-item' catchtap='addToMyCollection'>
+            <view class='item-image'>
+                <image wx:if='{{!isCollect}}' src='../../image/collection.png'></image>
+                <image wx:if='{{isCollect}}' src='../../image/collection_select.png'></image>
+            </view>
+            <view class='item-text'>收藏</view> 
+        </view>
+        <view class='box-item' catchtap='toComment'>
+            <view class='item-image'>
+                <image src='../../image/comment.png'></image>
+            </view>
+            <view class='item-text'>评论</view> 
+        </view>
+        <view class='box-item' catchtap='toFeedbackError'>
+            <view class='item-image'>
+                <image src='../../image/response.png'></image>
+            </view>
+            <view class='item-text'>反馈错误</view> 
+        </view>
+    </view>
+    <view class='line'></view>
+    <view class='comment'>
+         <view class='s-title'>
+            <text>留言</text>
+        </view>
+    </view>
+
+    <view wx:if='{{!commentItem || commentItem.length === 0}}' class='empty'>
+        <image src='../../image/empty.png'></image>
+        <view>留言为空喔~</view>
+    </view>
+
+
+
+    <view wx:for='{{commentItem}}' class='c-item'>            
+        <view class='c-item-title'>
+            <text class='c-name' catchtap='toUser'>{{item.uname}}</text>
+            <view class='c-image' catchtap='likeIt' data-id='{{item.id}}' data-index='{{index}}'> 
+                <image wx:if='{{!isPressed[index]}}' src='../../image/like.png'></image>
+                <image wx:if='{{isPressed[index]}}' src='../../image/like_select.png'></image>
+                <text class='likeNum'>{{item.likes}}</text>
+            </view>
+        </view>
+        <view class='c-content'>{{item.content}}</view>    
+    </view>
+</view>

@@ -1,0 +1,248 @@
+/* pages/carInfo/carInfo.wxss */
+
+/* 页面数据未准备好的样式 */
+.notReadyImage{
+    margin: 100px auto;
+    width: 90px;
+    height: 90px;
+}
+.notReadyImage image{
+    width: 100%;
+    height: 100%;
+    animation: rotate 1.5s ease-in-out infinite;
+}
+@keyframes rotate{
+    form{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+
+/* 页面数据已经准备好 */
+
+.header-image{
+    position: relative;
+    width: 100%;
+    height: 500rpx;
+}
+.swiper{
+    width: 100%;
+    height: 500rpx;
+}
+.swiper image{
+    width: 100%;
+}
+.picIndex{
+    position: absolute;
+    bottom: 30rpx;
+    left: 50rpx;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .6);
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    font-size: 13px;
+    border-radius: 10px; 
+}
+
+
+.h-tag{
+    width: 100%;
+}
+.carname{
+    width: 90%;
+    margin: 10px auto;
+    font-size: 18px;
+}
+.price{
+    width: 90%;
+    margin: 10px auto;
+    color: #FF6B23;
+    font-size: 25px;
+}
+.price text{
+    font-size: 12px;
+}
+.gh{
+    display: block;
+    width: 90%;
+    font-size: 13px;
+    margin: 10px auto;
+    color: #999;
+}
+.line{
+    width: 100%;
+    height: 15px;
+    background-color: #e5e5e5;
+}
+
+.shortInfo{
+    width: 100%
+}
+.s-title{
+    margin: 15px auto 0 auto;
+    width: 90%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+}
+.s-title text{
+    display: block;
+    padding-left: 10px;
+    border-left: 3px solid #FF6B23;
+}
+.s-row{
+    margin: 0 auto;
+    width: 90%;
+}
+.s-item{
+    display: inline-block;
+    margin: 10px 0;
+    width: 33%;
+    text-align: center;
+}
+.s-item-title{
+    margin: 5px auto;
+    font-size: 12px;
+    color: #999
+}
+.s-item-value{
+    margin: 5px auto;
+    font-size: 14px;
+    color: #000
+}
+
+.forMore{
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+.forMore image{
+    position: relative;
+    top: 1px;
+    width: 14px;
+    height: 14px;
+}
+
+.item{
+    width: 90%;
+    margin: 10px auto;
+}
+.item-list{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.item-list-left{
+    display: inline-block;
+    width: 50%;
+    color: #000;
+}
+.item-list-right{
+    display: inline-block;
+    width: 50%;
+    color: #999;
+    text-align: right;
+}
+.notForMore{
+    position: relative;
+    width: 90%;
+    margin: 10px auto;
+    text-align: right;
+    height: 16px;
+    line-height: 16px;
+    font-size: 14px;
+    color: #707070;
+}
+.notForMore image{
+    position: relative;
+    top: 1px;
+    margin-left: 5px;
+    width: 14px;
+    height: 14px;
+}
+
+
+.func-box{
+    width: 90%;
+    margin: 0 auto;
+}
+.box-item{
+    display: inline-block;
+    margin: 10px auto;
+    width: 33%;
+    height: 60px;
+    font-size: 13px;
+    text-align: center;
+}
+.item-image{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+.item-image image{
+    width: 40px;
+    height: 40px;
+}
+
+
+.comment{
+    width: 100%;
+}
+
+.c-item{
+    width: 90%;
+    margin: 30px auto;
+}
+.c-item-title{
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+    color: #2f96b4;
+}
+.c-name{
+    display: inline-block;
+}
+.c-image{
+    display: inline-block;
+    position: relative;
+    float: right;
+}
+.c-image image{
+    width: 15px;
+    height: 15px;
+}
+.likeNum{
+    margin-left: 5px;
+    color: #515151;
+}
+.c-content{
+    font-size: 13px;
+}
+
+
+
+.empty{
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+}
+.empty image{
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+}
+.empty view{
+    font-size: 13px;
+    color: #515151;
+}

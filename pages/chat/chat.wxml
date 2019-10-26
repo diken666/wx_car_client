@@ -1,0 +1,20 @@
+<view wx:if='{{!isLogin}}'>
+    <view class='notLoginStyle'>
+        <view class='nl-image'>
+            <image src='../../image/isNotLogin.png'></image>
+        </view>
+        <view class='nl-msg'>当前未登录，是否前往<text catchtap='toLogin'>登录</text>?</view>
+    </view>
+</view>
+<view wx:if='{{isLogin}}'>
+    <view wx:for='{{items}}' class='item' catchtap='toChatPage' data-sid='{{item.sid}}'>
+        <view class='item-left'>
+            <image src='{{item.simg}}'></image>
+        </view>
+        <view class='item-right'>
+            <view class='item-name'>{{item.sname}}</view>
+            <view class='item-content'>{{item.content}}</view>
+        </view>
+        <view class='item-time'>{{item.time}}</view>
+    </view>
+</view>

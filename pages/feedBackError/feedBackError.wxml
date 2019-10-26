@@ -1,0 +1,13 @@
+
+<view class='title'>错误模块</view>
+<picker class='picker' value='{{index}}' range='{{module}}' bindchange='moduleSelect'>
+    <text>{{module[index]}}</text>
+</picker>
+<view class='title'>错误描述</view>
+<textarea class='textarea' maxlength='200' value='' bindinput='userInput' placeholder='错误描述'>
+</textarea>
+<view class='lengthTip'>{{contentLength}}/200</view>
+<view class='btn-con'>
+    <button class='cancel' catchtap='cancel'>取消</button>
+    <button class='submit' catchtap='submit'>提交</button>
+</view>

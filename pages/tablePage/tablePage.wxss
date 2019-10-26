@@ -1,0 +1,41 @@
+/* pages/tablePage/tablePage.wxss */
+
+.box{
+    /* margin-top: 30px; */
+    width: 100%;
+}
+.box-item{
+    position: relative;
+    width: 90%;
+    height: 60px;
+    margin: 0 auto;
+    border-bottom: 1px solid #e6e6e6;
+}
+.box-image{
+    position: relative;
+    float: left;
+    top: 15px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.box-image image{
+    width: 30px;
+    height: 30px;
+}
+.box-title{
+    position: relative;
+    float: left;
+    display: inline-block;
+    font-size: 14px;
+    height: 60px;
+    line-height: 60px;
+}
+.right{
+    position: absolute;
+    top: 15px;
+    right: 5px;
+}
+.right image{
+    width: 30px;
+    height: 30px;
+}

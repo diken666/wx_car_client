@@ -1,0 +1,18 @@
+<view class='container'>
+  <view class='h-image'>
+    <image src='../../image/user.png' class='bg' mode='widthFix'></image>
+  </view>
+  <form  bindsubmit="formSubmit">
+    <view class='userName'>
+      <image src='../../image/userLogin.png'/>
+      <input name='userName' type='text' placeholder='uid'></input>  
+    </view>
+    <view class='password'>
+      <image src='../../image/psw.png'/>
+      <input  name='password' password='true' placeholder='password'></input>  
+    </view>
+    <view class='tips'>没有账号？点击<text catchtap='register'>注册</text></view>
+    <button class='btn-login' form-type='submit'>登录</button>
+  </form>
+</view>
+

@@ -1,0 +1,68 @@
+/* pages/lookMoreQuestion/lookMoreQuestion.wxss */
+
+
+.q-item{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.q-head{
+    font-size: 12px;
+    height: 20px;
+    color: #515151;
+}
+.q-userpic{
+    display: inline-block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.q-userpic image{
+    width: 20px;
+    height: 20px;
+}
+.q-name, .q-time{
+    display: inline-block;
+    position: relative;
+    /* float: left; */
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+.q-time{
+    margin-left: 20px;
+}
+.q-title{
+    font-size: 15px;
+    line-height: 25px;
+    margin: 20px auto;
+}
+.q-footer{
+    position: relative;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    color: #515151
+}
+.q-readNum, .q-replyNum{
+    position: relative;
+    display:  inline-block;
+    height: 20px;
+}
+.q-replyNum{
+    margin-left: 10px;
+}
+.q-readNum text,.q-replyNum text{
+    height: 20px;
+    line-height: 20px;
+}
+.q-readNum image,.q-replyNum image{
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+}

@@ -1,0 +1,27 @@
+<view class='container'>
+    <view class='item'>
+        <view class='name'>被举报用户</view>
+        <view class='value'>{{name}}</view>
+    </view>
+    <view class='item'>
+        <view class='name'>举报类型</view>
+        <view class='value'>
+            <picker bindchange='pickerChange' value='{{pickerIndex}}' range='{{pickerRange}}'>
+                <view>{{pickerRange[pickerIndex]}}</view>
+            </picker>
+        </view>
+    </view>
+    <view class='item'>
+        <view class='name fleft'>举报原因</view>
+        <view class='value fleft'>
+            <textarea bindinput='reasonInput' maxlength='150' placeholder='最多150字'></textarea>
+        </view>
+    </view>
+    <view class='item clearFloat'>
+        <view class='name fleft'>联系电话</view>
+        <view class='value fleft'>
+            <input value='' type='number' placeholder='电话' bindinput='phoneInput'></input>
+        </view>
+    </view>
+    <button class='btn' catchtap='submit'>提交</button>
+</view>

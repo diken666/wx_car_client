@@ -1,0 +1,32 @@
+<view class='search'>
+    <input class='input' placeholder='查找用户uid或姓名' bindinput='userInput'></input>   
+    <view class='list'>
+        <view class='item' wx:for='{{searchItems}}' data-fid='{{item.uid}}' catchtap='toChatPage'>
+            <view class='item-image'>
+                <image src='{{item.link}}'></image>
+            </view>
+            <view class='item-name'>{{item.name}}</view>
+            <view class='del' catchtap='addFriend' data-id='{{item.uid}}' data-name='{{item.name}}'>
+                <image src='../../image/add.png'></image>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='container'>
+    <view class='title'>我的好友</view>
+
+    <view wx:if='{{items.length===0?true:false}}' class='empty'>
+        <image src='../../image/empty.png'></image>
+        <view>好友为空喔~</view>
+    </view>
+
+    <view class='item' wx:for='{{items}}' data-fid='{{item.uid}}' catchtap='toChatPage'>
+        <view class='item-image'>
+            <image src='{{item.link}}'></image>
+        </view>
+        <view class='item-name'>{{item.name}}</view>
+        <view class='del' catchtap='removeFriend' data-id='{{item.uid}}' data-name='{{item.name}}'>
+            <image src='../../image/garbage.png'></image>
+        </view>
+    </view>
+</view>

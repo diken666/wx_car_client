@@ -1,0 +1,10 @@
+
+<textarea class='title' bindinput='titleInput' maxlength='30' placeholder='这里输入标题'></textarea>
+<view class='lengthTip'>{{titleLength}}/30</view>
+<textarea class='content' bindinput='contentInput' maxlength='200' placeholder='这里输入内容'></textarea>
+<view class='lengthTip'>{{contentLength}}/200</view>
+
+<view class='btn-con'>
+    <button class='cancel' catchtap='cancel'>取消</button>
+    <button class='submit' catchtap='submit'>发布</button>
+</view>

@@ -1,0 +1,75 @@
+/* pages/chat/chat.wxss */
+
+.notLoginStyle{
+    width: 100%;
+    margin-top: 150px;
+}
+.nl-image{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.nl-image image{
+    width: 100px;
+    height: 100px;
+}
+.nl-msg{
+    width: 100%;
+    margin-top: 20px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+.nl-msg text{
+    color: #2f96b4
+}
+
+
+.item{
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.item-left{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.item-left image{
+    width: 40px;
+    height: 40px;
+}
+.item-right{
+    margin-left: 20px;
+    position: absolute;
+    top: 15px;
+    display: inline-block;
+    width: 60%;
+    height: 40px;
+    overflow: hidden;
+}
+.item-name{
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+}
+.item-content{
+    height: 20px;
+    line-height: 20px;
+    font-size: 13px;
+    color: #888;
+}
+.item-time{
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+    color: #888;
+}

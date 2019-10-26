@@ -1,0 +1,93 @@
+/* pages/carSearch/carSearch.wxss */
+
+.search{
+    width: 100%;
+    font-size: 13px;
+}
+.s-center{
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+.s-content{
+    position: relative;
+    display: inline-block;
+    width: 75%;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #e6e6e6;
+    overflow: hidden;
+}
+.s-content icon{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+}
+.s-content input{
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+}
+.s-btn{
+    position: relative;
+    float: right;
+    display: inline-block;
+    margin-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+
+.item-con{
+    font-size: 13px;
+    margin-top: 20px;
+}
+.item{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+.item-title{
+    height: 25px;
+    line-height: 25px;
+    font-size: 15px;
+}
+.item-del{
+    display: inline-block;
+    position: relative;
+    float: right;
+    height: 25px;
+    line-height: 25px;
+}
+.item-del text{
+    margin-left: 3px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.item-del image{
+    position: relative;
+    top: 2px;
+    width: 13px;
+    height: 13px;
+}
+
+.item-list{
+    width: 90%;
+    margin: 10px auto;
+}
+.item-list text{
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 5px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+.item-list text:first-child{
+    margin-left: 0;
+}

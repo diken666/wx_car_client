@@ -1,0 +1,94 @@
+/* pages/userInfo/userInfo.wxss */
+
+page{
+    height: 100%;
+    background-color: #e6e6e6;
+}
+.head{
+    padding: 20px 5%;
+    height: 60px;
+    margin: 0 auto 10px auto;
+    background-color: #fff;
+}
+.h-userPic{
+    display: inline-block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.h-userPic image{
+    width: 60px;
+    height: 60px;
+}
+.h-title{
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+    height: 60px;
+}
+.h-name{
+    height: 35px;
+    font-size: 25px;
+    line-height: 35px;
+}
+.h-name image{
+    position: relative;
+    top: 5px;
+    float: right;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+}
+.h-location{
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    color: #999;
+}
+
+.content{
+    padding: 0 5%;
+    position: relative;
+    background-color: #fff;
+}
+
+.item{
+    padding: 15px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.item-title{
+    display: inline-block;
+    width: 30%;
+}
+.item-value{
+    display: inline-block;
+    width: 60%;
+    color: #999;
+}
+
+
+
+
+.report{
+    margin: 10px 0;
+    padding: 15px 5%;
+    background-color: #fff;
+}
+.report image{
+    position: relative;
+    float: right;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.contect{
+    padding: 0 5%;
+    background-color: #fff;
+}
+.contect view{
+    padding: 15px 0;
+    border-bottom: 1px solid #e6e6e6;
+}

@@ -1,0 +1,42 @@
+/* pages/feedBackError/feedBackError.wxss */
+
+.title{
+    width: 90%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+.picker, .textarea{
+    width: 90%;
+    font-size: 13px;
+    border: 1px solid #e6e6e6;
+    margin: 10px auto;
+}
+
+.lengthTip{
+    width: 90%;
+    margin: 5px auto;
+    text-align: right;
+    font-size: 13px;
+}
+.btn-con{
+    width: 90%;
+    margin: 20px auto;
+}
+.cancel, .submit{
+    display: inline-block;
+    width: 30%;
+    color: #fff
+}
+.cancel{
+    float: left;
+    margin-left: 20px;
+    background-color: #4cb4e7;
+}
+.submit{
+    background-color: #ff6b23;
+    float: right;
+    margin-right: 20px;
+}

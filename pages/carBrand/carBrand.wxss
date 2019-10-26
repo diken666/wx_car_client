@@ -1,0 +1,31 @@
+/* pages/carBrand/carBrand.wxss */
+.container{
+    /* background-color: #e6e6e6 */
+}
+
+.item{
+    width: 100%;
+    font-size: 14px;
+    /* padding: 10px 0; */
+    background-color: #fff;
+}
+.item view{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e6e6e6;
+    font-weight: 500;
+}
+
+.item text{
+    display: block;
+    font-size: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+    background-color: #e6e6e6
+}

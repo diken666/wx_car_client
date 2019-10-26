@@ -1,0 +1,23 @@
+  <view class='car-container'>
+
+    <view wx:if='{{carItem ===[] || carItem === null?true:false}}' class='empty'>
+        <image src='../../image/empty.png'></image>
+        <view>收藏为空喔~</view>
+    </view>
+    <view wx:for='{{carItem}}' class='item' wx:key='{{item.id}}' data-id='{{item.id}}' catchtap='carSelect'>
+      <view class='pic-container'>
+        <image src='{{pics[index]}}' mode='' lazy-load='true'></image>
+      </view>
+      <view class='carInfo'>
+        <text class='carInfo-title'>{{item.carname}}</text>
+        <text class='carInfo-time'>{{item.spsj}}</text>
+        <text class='carInfo-dis'>{{item.xslc}}万公里</text>
+        <text class='carInfo-gh'>{{item.gh}}过户</text>
+        <text class='carInfo-price'>{{item.price}}万</text>
+        <text class='carInfo-firstPay'>首付{{item.firstPay}}万</text>
+      </view>
+      <view class='del' catchtap='delCollection' data-cid='{{item.id}}' data-index='{{index}}'>
+        <image src='../../image/garbage.png'></image>
+      </view>
+    </view> 
+  </view>

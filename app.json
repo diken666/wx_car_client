@@ -1,0 +1,83 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/buyCar/buyCar",
+        "pages/saleCar/saleCar",
+        "pages/chat/chat",
+        "pages/me/me",
+        "pages/login/login",
+        "pages/register/register",
+        "pages/set/set",
+        "pages/carSearch/carSearch",
+        "pages/favorite/favorite",
+        "pages/filter/filter",
+        "pages/carBrand/carBrand",
+        "pages/carInfo/carInfo",
+        "pages/comment/comment",
+        "pages/chatPage/chatPage",
+        "pages/friends/friends",
+        "pages/question/question",
+        "pages/feedBackError/feedBackError",
+        "pages/questionArticle/questionArticle",
+        "pages/writeQuestionComment/writeQuestionComment",
+        "pages/lookMoreQuestion/lookMoreQuestion",
+        "pages/history/history",
+        "pages/userInfo/userInfo",
+        "pages/myReport/myReport",
+        "pages/reportUser/reportUser",
+        "pages/saleCarSubmit/saleCarSubmit",
+        "pages/evaluateCar/evaluateCar",
+        "pages/tablePage/tablePage",
+        "pages/saleCarRecord/saleCarRecord",
+        "pages/carDistribution/carDistribution",
+        "pages/carPriceDistribution/carPriceDistribution",
+        "pages/carAgeDistribution/carAgeDistribution",
+        "pages/carTypeDistribution/carTypeDistribution",
+        "pages/carHotDistribution/carHotDistribution",
+        "cutHeadPic/avatarUpload/index/index",
+        "cutHeadPic/avatarUpload/upload/upload"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#FFF",
+        "navigationBarTitleText": "二手车平台",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#666666",
+        "selectedColor": "#f10b2e",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "./image/info.png",
+                "selectedIconPath": "./image/info_select.png"
+            },
+            {
+                "pagePath": "pages/buyCar/buyCar",
+                "text": "买车",
+                "iconPath": "./image/buyCar.png",
+                "selectedIconPath": "./image/buyCar_select.png"
+            },
+            {
+                "pagePath": "pages/saleCar/saleCar",
+                "text": "卖车",
+                "iconPath": "./image/saleCar.png",
+                "selectedIconPath": "./image/saleCar_select.png"
+            },
+            {
+                "pagePath": "pages/chat/chat",
+                "text": "聊天",
+                "iconPath": "./image/chat.png",
+                "selectedIconPath": "./image/chat_select.png"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "text": "我",
+                "iconPath": "./image/me.png",
+                "selectedIconPath": "./image/me_select.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

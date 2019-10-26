@@ -1,0 +1,33 @@
+<view class='b-filter' catchtap='filterSelect'>
+      <view class='filter-item'>
+        <view>车龄<text>（单位：年）</text></view>
+        <slider min='0' max='14' show-value='true' value='{{carAge}}' activeColor='#FF6B23' bindchange='ageChange'></slider>
+      </view>
+      <view class='filter-item'>
+        <view>行驶里程<text>（单位：万公里）</text></view>
+        <slider min='0' max='80' show-value='true' value='{{distance}}' activeColor='#FF6B23' bindchange='disChange'></slider>
+      </view>
+      <view class='filter-item'>
+        <view>排量<text>（单位：升）</text></view>
+        <slider min='0' max='7' show-value='true' value='{{pl}}' activeColor='#FF6B23' bindchange='plChange'></slider>
+      </view>
+      <view class='filter-item' catchtap='standSelect'>
+        <view>排放标准</view>
+        <text class='item {{standSel=="0"?"select":""}}' data-value='0'>国二及以下</text>
+        <text class='item {{standSel=="1"?"select":""}}' data-value='1'>国三及以上</text>
+        <text class='item  {{standSel=="2"?"select":""}}'data-value='2'>国四及以上</text>
+        <text class='item {{standSel=="3"?"select":""}}' data-value='3'>国五及以上</text>
+      </view>
+      <view class='filter-item' catchtap='boxSelect'>
+        <view>变速箱</view>
+        <text class='item {{boxSel=="手动"?"select":""}}' data-value='手动'>手动</text>
+        <text class='item {{boxSel=="自动"?"select":""}}' data-value='自动'>自动</text>
+      </view>
+      <view class='filter-item'  catchtap='comeSelect'>
+        <view>来源</view>
+        <text class='item {{comeSel=="瓜子"?"select":""}}' data-value='瓜子'>瓜子</text>
+        <text class='item {{comeSel=="人人车"?"select":""}}' data-value='人人车'>人人车</text>
+        <text class='item {{comeSel=="本站"?"select":""}}' data-value='本站'>本站</text>
+      </view>
+      <button class='btn' catchtap='submit'>确定</button>
+</view>

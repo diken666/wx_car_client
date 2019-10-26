@@ -1,0 +1,6 @@
+<form bindsubmit='comment'>
+    <textarea class='textarea' name='value' maxlength='200' auto-focus='true' placeholder='输入你的评论' bindinput='userInput'></textarea>
+    <view class='length'>{{valueLength}}/200</view>
+    <button class='btn' form-type='submit'>留言</button>
+</form>
+

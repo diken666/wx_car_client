@@ -1,0 +1,24 @@
+<view wx:if='{{!isHistoryReady}}'>
+    <view class='notReadyImage'>
+        <image src='../../image/loading_red.png'></image>
+    </view>
+</view>
+
+<view wx:if='{{isHistoryReady}}'>
+    <view wx:if='{{!historyItem || historyItem.length === 0}}' class='empty'>
+        <image src='../../image/empty.png'></image>
+        <view>历史记录为空喔~</view>
+    </view>
+    <view wx:if='{{historyItem && historyItem.length !== 0}}' class='container'>
+        <view wx:for='{{historyItem}}' class='item'>
+            <view class='trans-con'>
+                <image class='trans' src='../../image/trans.png'></image>
+                <text class='time'>{{item.time}}</text>
+            </view>
+            <view class='pic' catchtap='picTap' data-cid='{{item.cid}}' data-index='{{index}}'>
+                <image src='{{item.pic}}'></image>  
+            </view> 
+            <image class='delete' data-cid='{{item.cid}}' data-index='{{index}}' catchtap='deleteCar' src='../../image/garbage.png'></image>
+        </view>
+    </view>
+</view>

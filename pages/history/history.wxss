@@ -1,0 +1,105 @@
+/* pages/history/history.wxss */
+
+
+
+/* 页面数据未准备好的样式 */
+.notReadyImage{
+    margin: 100px auto;
+    width: 90px;
+    height: 90px;
+}
+.notReadyImage image{
+    width: 100%;
+    height: 100%;
+    animation: rotate 1.5s ease-in-out infinite;
+}
+@keyframes rotate{
+    form{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+}
+
+
+
+.empty{
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+}
+.empty image{
+    width: 40px;
+    height: 40px;
+    margin: 10px auto;
+}
+.empty view{
+    font-size: 13px;
+    color: #515151;
+}
+
+
+
+
+
+.container{
+    width: 100%;
+    padding: 30px 0;
+}
+
+.item{
+    position: relative;
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    border-left: 1px solid #bfbfbf;
+    /* border-bottom: 1px solid #bfbfbf; */
+    padding: 10px 0;
+}
+.trans-con{
+    position: relative;
+    float: left;
+    left: -3px;
+    display: inline-block;
+    height: 10px;
+    padding:40px 0;
+}
+.trans, .price-pic, .location-pic{
+    width: 10px;
+    height: 10px;
+}
+.trans{
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+.time{
+    color: #bfbfbf;
+    font-size: 15px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+    float: left;
+}
+.pic{
+    float: left;
+    margin-left: 20px;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden
+}
+.pic image{
+    width: 100%;
+    height: 100%;
+}
+
+.delete{
+    position: relative;
+    top: 40px;
+    float: left;
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+}

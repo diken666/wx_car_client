@@ -1,0 +1,96 @@
+<!-- 搜索 -->
+<view class='search'>
+  <picker value='{{selectIndex}}' range='{{place}}' class='s-picker' bindchange='placeChange'>
+    <text>{{place[selectIndex]}}</text>
+    <image src='../../image/location_1.png'></image>
+  </picker>
+  <view class='s-input' catchtap='toCarSearch'>
+    <icon type='search' size='13px' color='#a5abb2'></icon>
+    <text>搜索你想要的车</text>
+  </view>
+  <view class='s-favorite' catchtap='toFavorite'>
+    <image src='../../image/favorite.png'></image>
+  </view>
+</view>
+
+<!-- 筛选 -->
+<view class='filter'>
+  <view class='f-item' catchtap='orderShow'>
+    <text>排序</text>
+    <image src='../../image/order.png'></image>
+  </view>
+  <view class='f-item' catchtap='brandShow'>
+    <text>品牌</text>
+    <image src='../../image/tag.png'></image>
+  </view>
+  <view class='f-item' catchtap='priceShow'>
+    <text>价格</text>
+    <image src='../../image/price.png'></image>
+  </view>
+  <view class='f-item' catchtap='filterShow'>
+    <text>筛选</text>
+    <image src='../../image/filter.png'></image>
+  </view>
+  <view class='b-order' wx:if='{{isOrderShow}}' catchtap='orderSelect'>
+    <view data-value='0'>默认</view>
+    <view data-value='1'>价格最高</view>
+    <view data-value='2'>价格最低</view>
+    <view data-value='3'>车龄最短</view>
+    <view data-value='4'>里程最少</view>
+    <view data-value='5'>过户最少</view>
+  </view>
+  <view class='b-price' wx:if='{{isPriceShow}}' catchtap='priceSelect'>
+    <text class='priceShow'>{{minPrice}}-{{maxPrice}}万</text>
+    <view class='minView'>
+      <text>高于</text>
+      <slider min="0" max="100" class='slider1' show-value='true' bindchange='minPriceSlider' activeColor='#FF6B23'></slider>
+    </view>
+    <view class='maxView'>
+      <text>低于</text>
+      <slider min="{{minPrice}}" max="100" class='slider2' show-value='true' bindchange='maxPriceSlider' activeColor='#FF6B23'></slider>
+    </view>
+  </view>
+
+</view>
+
+<!-- 已经选择的筛选条件 -->
+<view class='choose'>
+    <view wx:for='{{hasChoose}}' class='chooseItme' wx:if='{{item.isShow}}'>
+        <text>{{item.msg}}</text>
+        <image src='../../image/delete.png'  catchtap='{{item.bindEvent}}'></image>
+    </view>
+    <view class='btn-search' wx:if='{{isButtonSearchShow}}' catchtap='search'>确定</view>
+</view>
+  <view class='car-container'>
+        <view wx:for='{{carItem}}' class='item' wx:key='{{item.id}}' data-id='{{item.id}}' catchtap='carSelect'>
+            <view class='pic-container'>
+                <image src='{{picArr[index]}}' mode='' lazy-load='true'></image>
+            </view>
+            <view class='carInfo'>
+                <text class='carInfo-title'>{{item.carname}}</text>
+                <text class='carInfo-time'>{{item.spsj}}</text>
+                <text class='carInfo-dis'>{{item.xslc}}万公里</text>
+                <view class='carInfo-con'>
+                    <image class='carInfo-image' src='../../image/location.png'></image>
+                    <text class='carInfo-place'>{{item.place}}</text>
+                    <text class='carInfo-gh'>{{item.gh}}过户</text>  
+                </view>
+                <text class='carInfo-price'>{{item.price}}万</text>
+                <text class='carInfo-firstPay'>首付{{item.firstPay}}万</text>
+                <view class='carInfo-collection' data-index='{{index}}' data-id='{{item.id}}' catchtap='addToMyCollection'>
+                    <image wx:if='{{!isCollect[index]}}' src='../../image/collection.png'></image>
+                    <image wx:if='{{isCollect[index]}}' src='../../image/collection_select.png'></image>
+                </view>
+            </view>
+        </view>
+        <view class='loading' wx:if='{{isLoadingShow}}'>
+            <image wx:if='{{!isBottom}}' src='../../image/loading.png'></image>
+            <text wx:if='{{isBottom}}'>已经到底啦</text>
+       </view>
+  </view>
+
+<view class='info-container' wx:if='{{isInfoShow}}'>
+    <view class='info'>
+        为你找到{{count}}辆车
+    </view>
+</view>
